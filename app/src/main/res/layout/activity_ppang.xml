@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/id_ppang_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:text="color"
+        android:textColor="@color/colorWhite" />
+
+    <WebView
+        android:id="@+id/id_ppang_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorRed" />
+
+    <Button
+        android:id="@+id/id_ppang_button2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorGreen"
+        android:text="color2"
+        android:textColor="@color/colorWhite" />
+
+    <com.ljstudio.android.loveday.views.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sl_shadow_angle="90"
+        app:sl_shadow_color="@color/colorGray"
+        app:sl_shadow_distance="3dp"
+        app:sl_shadow_radius="10dp"
+        app:sl_shadowed="true">
+
+        <com.ljstudio.android.loveday.views.CircleImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:src="@mipmap/google_calendar_01"
+            app:civ_border_color="@color/colorGrayLight"
+            app:civ_border_width="0dp" />
+    </com.ljstudio.android.loveday.views.ShadowLayout>
+
+
+</LinearLayout>

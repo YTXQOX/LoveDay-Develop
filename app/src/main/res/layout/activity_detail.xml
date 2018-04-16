@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_summer"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.ljstudio.android.loveday.activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <com.ljstudio.android.loveday.views.SprayView
+        android:id="@+id/id_detail_spray_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_detail_toolbar" />
+
+    <com.ljstudio.android.loveday.views.fallingview.FallingView
+        android:id="@+id/id_detail_falling_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:alpha="0.9"
+        app:fallingDelay="20"
+        app:flakeDensity="30"
+        app:flakeSrc="@mipmap/ic_winter_snow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_detail_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_detail_days_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_detail_title_bg"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="title"
+                android:transitionName="detail_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:id="@+id/id_detail_days_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_detail_days_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="48dp"
+                    android:text="Days"
+                    android:transitionName="detail_days"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="72sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrayLight" />
+
+                <TextView
+                    android:id="@+id/id_detail_days_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="start"
+                    android:transitionName="detail_date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.ljstudio.android.loveday.views.fallingview.FallingView>
+
+</RelativeLayout>
